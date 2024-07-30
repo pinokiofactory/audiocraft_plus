@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
   version: "2.0",
-  title: "audiocraftplus",
-  description: "",
+  title: "audiocraft_plus",
+  description: "AudioCraft Plus is an all-in-one WebUI for the original AudioCraft, adding many quality features on top https://github.com/GrandaddyShmax/audiocraft_plus",
   icon: "icon.jpeg",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")

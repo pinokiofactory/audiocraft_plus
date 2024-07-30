@@ -9,6 +9,14 @@ module.exports = {
         ]
       }
     },
+    {
+      when: "{{platform === 'darwin'}}",
+      method: "shell.run",
+      params: {
+        message: "git checkout mac-os-fix",
+        path: "app"
+      }
+    },
     // Delete this step if your project does not use torch
     {
       method: "script.start",
@@ -17,7 +25,7 @@ module.exports = {
         params: {
           venv: "env",                // Edit this to customize the venv folder path
           path: "app",                // Edit this to customize the path to start the shell from
-          // xformers: true   // uncomment this line if your project requires xformers
+          xformers: true   // uncomment this line if your project requires xformers
         }
       }
     },
@@ -28,7 +36,6 @@ module.exports = {
         venv: "env",                // Edit this to customize the venv folder path
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "pip install gradio devicetorch",
           "pip install -r requirements.txt"
         ]
       }
